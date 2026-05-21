@@ -487,57 +487,33 @@ h3 {
   object-fit: cover;
 }
 
-.demo-steps {
+.feature-points {
   display: grid;
   gap: 10px;
   padding: 0;
   margin: 24px 0 0;
   list-style: none;
-  counter-reset: demo-step;
 }
 
-.demo-steps li {
+.feature-points li {
   position: relative;
   min-height: 46px;
-  padding: 10px 14px 10px 58px;
+  padding: 12px 16px 12px 46px;
   border: 1px solid var(--line);
   border-radius: 14px;
   background: rgba(255, 253, 248, 0.78);
   color: var(--muted);
-  counter-increment: demo-step;
 }
 
-.demo-steps li::before {
-  content: counter(demo-step);
+.feature-points li::before {
+  content: "";
   position: absolute;
-  left: 14px;
-  top: 10px;
-  display: grid;
-  place-items: center;
-  width: 30px;
-  height: 30px;
+  left: 18px;
+  top: 1.25em;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  color: #fff;
   background: var(--teal);
-  font-size: 15px;
-  font-weight: 900;
-}
-
-.voiceover-box {
-  margin-top: 18px;
-  padding: 18px 20px;
-  border-left: 5px solid var(--orange);
-  border-radius: 14px;
-  background: #fff6eb;
-}
-
-.voiceover-box strong {
-  color: #9a5a20;
-}
-
-.voiceover-box p {
-  margin: 8px 0 0;
-  font-size: 17px;
 }
 
 .check-list {

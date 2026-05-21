@@ -22,7 +22,7 @@ document.querySelectorAll(".video-placeholder").forEach((placeholder) => {
         video.controls = true;
         video.preload = "metadata";
         video.src = src;
-        video.setAttribute("aria-label", placeholder.dataset.videoLabel || "功能演示视频");
+        video.setAttribute("aria-label", placeholder.dataset.videoLabel || "功能视频");
         placeholder.replaceChildren(video);
         placeholder.classList.add("has-video");
       })
