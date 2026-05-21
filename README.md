@@ -25,10 +25,9 @@ http://localhost:8080
 
 把本地视频文件放入 `videos/` 目录，建议使用以下文件名：
 
-- `videos/face-to-face.mp4`
-- `videos/pronunciation-practice.mp4`
-- `videos/daily-phrases.mp4`
-- `videos/training-feedback.mp4`
+- `videos/free-speech-practice.mp4`：自由说话练习
+- `videos/follow-me-say.mp4`：跟我说
+- `videos/face-to-face.mp4`：面对面沟通
 
 如果使用其他文件名，请同步修改 `features.html` 中对应的 `data-video-src`。
 
