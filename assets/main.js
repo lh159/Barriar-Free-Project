@@ -8,6 +8,33 @@ if (navToggle && siteNav) {
   });
 }
 
+document.querySelectorAll(".hero-carousel").forEach((carousel) => {
+  const track = carousel.querySelector(".carousel-track");
+  const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
+  const dots = Array.from(carousel.querySelectorAll(".carousel-dots span"));
+
+  if (!track || slides.length < 2) {
+    return;
+  }
+
+  let activeIndex = 0;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const goToSlide = (index) => {
+    activeIndex = index % slides.length;
+    track.style.transform = `translateX(-${activeIndex * 100}%)`;
+    dots.forEach((dot, dotIndex) => {
+      dot.classList.toggle("active", dotIndex === activeIndex);
+    });
+  };
+
+  if (!reduceMotion) {
+    window.setInterval(() => {
+      goToSlide(activeIndex + 1);
+    }, 4200);
+  }
+});
+
 document.querySelectorAll(".video-placeholder").forEach((placeholder) => {
   const src = placeholder.dataset.videoSrc;
 

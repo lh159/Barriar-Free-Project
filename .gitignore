@@ -3,3 +3,6 @@
 node_modules/
 .idea/
 .vscode/
+
+# Local source video kept for reference; the site uses videos/cctv-report.mp4.
+videos/获央视财经频道报道.mp4
