@@ -558,7 +558,7 @@ h3 {
 
 .feature-detail {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  grid-template-columns: minmax(260px, 0.68fr) minmax(0, 1.32fr);
   gap: 42px;
   align-items: center;
   padding: 44px 0;
@@ -584,6 +584,13 @@ h3 {
   color: var(--teal-dark);
   text-align: center;
   box-shadow: var(--shadow);
+}
+
+.feature-video {
+  width: min(100%, 360px);
+  aspect-ratio: 9 / 16;
+  min-height: 0;
+  justify-self: center;
 }
 
 .play-mark {
@@ -847,6 +854,28 @@ h3 {
 .media-list strong {
   color: var(--ink);
   line-height: 1.5;
+}
+
+@media (max-width: 1060px) {
+  .hero,
+  .split-feature,
+  .coverage-feature,
+  .story-feature {
+    gap: 30px;
+  }
+
+  .split-feature {
+    grid-template-columns: minmax(0, 0.95fr) minmax(300px, 1.05fr);
+  }
+
+  .story-feature {
+    grid-template-columns: minmax(240px, 0.78fr) minmax(0, 1.22fr);
+  }
+
+  .feature-list a {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 .story-list {
@@ -1126,6 +1155,14 @@ h3 {
     padding-top: 44px;
   }
 
+  .section-wrap {
+    padding: 58px 0;
+  }
+
+  .feature-video {
+    width: min(100%, 320px);
+  }
+
   .carousel-placeholder {
     min-height: 360px;
   }
@@ -1154,7 +1191,23 @@ h3 {
   }
 
   h1 {
-    font-size: 42px;
+    font-size: 38px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .hero-lede,
+  .page-hero p,
+  .section-heading p,
+  .split-feature p,
+  .detail-copy p {
+    font-size: 17px;
+  }
+
+  .button {
+    width: 100%;
   }
 
   .metric-row,
@@ -1176,7 +1229,7 @@ h3 {
   }
 
   .carousel-slide img {
-    height: 300px;
+    height: 260px;
   }
 
   .carousel-placeholder strong {
@@ -1193,6 +1246,14 @@ h3 {
     padding: 24px;
   }
 
+  .feature-video {
+    width: min(100%, 270px);
+  }
+
+  .qr-card {
+    padding: 20px;
+  }
+
   .activity-summary-panel {
     grid-template-columns: 1fr;
   }
@@ -1200,6 +1261,33 @@ h3 {
   .story-card,
   .scenario-card {
     padding: 24px;
+  }
+}
+
+@media (max-width: 380px) {
+  .section-band,
+  .section-wrap,
+  .page-hero,
+  .feature-detail,
+  .coverage-feature,
+  .impact-dashboard,
+  .activity-overview,
+  .media-coverage,
+  .story-list,
+  .impact-preview {
+    width: min(100% - 24px, 1180px);
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .carousel-slide img {
+    height: 230px;
+  }
+
+  .feature-video {
+    width: min(100%, 240px);
   }
 }
 
